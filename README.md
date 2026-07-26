@@ -47,5 +47,3 @@ projeto/
 
 Gabrieli Gubert
 
-## Projeto desenvolvido para estudos na Alura.
-
