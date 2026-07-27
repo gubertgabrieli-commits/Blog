@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemática Sem Mistérios</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Matemática Sem Mistérios</h1>
+
+        <p>
+            "Vou compartilhar conhecimentos para descomplicar a matemática."
+        </p>
+    </header>
+
+    <main>
+
+        <section>
+
+            <h2>Meu Primeiro Post</h2>
+
+            <p><strong>Por Gabrieli Gubert</strong></p>
+
+            <img
+                src="matematica.png"
+                alt="Ilustração com números, cálculos e símbolos matemáticos representando o aprendizado da matemática."
+                class="imagem">
+
+            <p>
+                Seja muito bem-vindo(a) ao <strong>Matemática Sem Mistérios</strong>!
+            </p>
+
+            <p>
+                Criei este blog para compartilhar conhecimentos e mostrar que aprender matemática pode ser muito mais fácil do que parece.
+            </p>
+
+            <p>
+                Aqui você encontrará dicas, explicações e conteúdos que ajudam a compreender os principais assuntos de matemática de forma simples, prática e sem complicações.
+            </p>
+
+            <p>
+                Meu objetivo é incentivar mais pessoas a estudarem matemática com confiança, mostrando que qualquer pessoa pode aprender quando o conteúdo é explicado de maneira clara.
+            </p>
+
+            <p>
+                Espero que este blog seja útil para os seus estudos. Obrigada pela visita e aproveite o conteúdo!
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Desenvolvido por Gabrieli Gubert © 2026</p>
+    </footer>
+
+</body>
+
+</html>
