@@ -1,60 +1,196 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Matemática Sem Mistérios</title>
 
-    <link rel="stylesheet" href="style.css">
+    <meta
+        name="description"
+        content="Aprenda matemática de forma simples, divertida e sem complicações."
+    >
 
-    <meta name="description" content="Aprenda matemática de forma simples, divertida e sem complicações.">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>📚 Matemática Sem Mistérios</h1>
+    <header class="cabecalho">
+        <div class="container">
+            <span class="icone">📚</span>
 
-        <p class="frase">
-            "Vou compartilhar conhecimentos para descomplicar a matemática."
-        </p>
+            <h1>Matemática Sem Mistérios</h1>
+
+            <p class="frase">
+                "Vou compartilhar conhecimentos para descomplicar a matemática."
+            </p>
+        </div>
     </header>
 
-    <main>
+    <main class="container">
 
-        <article>
+        <article class="post">
 
-            <h2>Bem-vindo ao Blog!</h2>
+            <div class="post-cabecalho">
+                <span class="categoria">📖 Aprendizado</span>
 
-            <p class="autor">Por Matemática Sem Mistérios</p>
+                <h2>Bem-vindo ao Blog!</h2>
 
-            <img src="matematica.png" alt="Matemática">
-
-            <p>
-                A matemática está presente em nosso dia a dia e pode ser muito mais
-                simples do que parece. Neste blog você encontrará conteúdos,
-                curiosidades, dicas e exercícios para aprender de forma divertida e
-                sem complicações.
-            </p>
-
-            <h3>Qual foi sua reação ao conteúdo?</h3>
-
-            <div class="reacoes">
-                <button class="reacao">👍 Gostei</button>
-                <button class="reacao">❤️ Amei</button>
-                <button class="reacao">😂 Engraçado</button>
-                <button class="reacao">🤩 Incrível</button>
-                <button class="reacao">😮 Surpreso</button>
+                <p class="autor">
+                    Por <strong>Matemática Sem Mistérios</strong>
+                </p>
             </div>
 
-            <p id="mensagem"></p>
+            <img
+                src="matematica.png"
+                alt="Ilustração relacionada à matemática"
+                class="imagem-principal"
+            >
+
+            <p class="introducao">
+                A matemática está presente em nosso dia a dia e pode ser muito
+                mais simples do que parece. Neste blog você encontrará conteúdos,
+                curiosidades, dicas e exercícios para aprender de forma divertida
+                e sem complicações.
+            </p>
+
+            <section class="aprendizado">
+
+                <h2>📌 Vamos revisar o que fizemos até agora?</h2>
+
+                <p>
+                    Primeiro, identificamos os elementos do
+                    <strong>modelo de caixa (Box Model)</strong>, entendendo como
+                    funcionam o conteúdo e as propriedades de espaçamento.
+                </p>
+
+                <div class="cards">
+
+                    <div class="card">
+                        <div class="card-icone">📦</div>
+
+                        <h3>1. Modelo de Caixa</h3>
+
+                        <p>
+                            Aprendemos que cada elemento de uma página pode ser
+                            entendido como uma caixa formada por conteúdo,
+                            espaçamento, borda e margem.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icone">📐</div>
+
+                        <h3>2. Padding, Border e Margin</h3>
+
+                        <p>
+                            Aplicamos <strong>padding</strong>,
+                            <strong>border</strong> e <strong>margin</strong>
+                            para controlar os espaços e as distâncias entre
+                            os elementos da página.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icone">🖼️</div>
+
+                        <h3>3. Imagens e Acessibilidade</h3>
+
+                        <p>
+                            Inserimos imagens utilizando a tag
+                            <code>&lt;img&gt;</code> e o atributo
+                            <code>alt</code>, descrevendo seu conteúdo para
+                            tornar a página mais acessível.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icone">✨</div>
+
+                        <h3>4. Imagens com Gemini</h3>
+
+                        <p>
+                            Aprendemos a utilizar o <strong>Gemini</strong>
+                            para gerar imagens coerentes com o contexto da
+                            nossa página, tornando o projeto mais visual e
+                            interessante.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="conclusao">
+
+                    <span class="conclusao-icone">🎯</span>
+
+                    <div>
+                        <h3>O que conseguimos?</h3>
+
+                        <p>
+                            Com tudo isso, conseguimos melhorar o
+                            <strong>design</strong> e a
+                            <strong>acessibilidade visual</strong> das nossas
+                            páginas web, além de compreender melhor como os
+                            elementos HTML e CSS trabalham juntos.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="reacoes">
+
+                <h2>Qual foi sua reação ao conteúdo?</h2>
+
+                <div class="botoes-reacao">
+
+                    <button class="reacao" type="button">
+                        👍 Gostei
+                    </button>
+
+                    <button class="reacao" type="button">
+                        ❤️ Amei
+                    </button>
+
+                    <button class="reacao" type="button">
+                        😂 Engraçado
+                    </button>
+
+                    <button class="reacao" type="button">
+                        🤩 Incrível
+                    </button>
+
+                    <button class="reacao" type="button">
+                        😮 Surpreso
+                    </button>
+
+                </div>
+
+                <p id="mensagem" aria-live="polite"></p>
+
+            </section>
 
         </article>
 
     </main>
 
-    <script src="script.js"></script>
+    <footer class="rodape">
+
+        <p>
+            © 2026 Matemática Sem Mistérios
+        </p>
+
+        <p>
+            Aprender pode ser simples, divertido e acessível! 💜
+        </p>
+
+    </footer>
+
+    <script src="JavaScript/script.js"></script>
 
 </body>
+
 </html>
