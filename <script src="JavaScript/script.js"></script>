@@ -16,3 +16,4 @@ botoes.forEach(botao => {
     });
 
 });
+<script src="JavaScript/script.js"></script>
