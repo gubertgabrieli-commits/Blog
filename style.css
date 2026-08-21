@@ -1,6 +1,6 @@
-/* =========================================
+/* ==============================
 CONFIGURAÇÕES GERAIS
-========================================= */
+================================= */
 
 {
 box-sizing: border-box;
@@ -12,93 +12,61 @@ scroll-behavior: smooth;
 
 body {
 margin: 0;
+
 font-family: Arial, Helvetica, sans-serif;
 
-background:
-    radial-gradient(circle at top left, #fff0f8 0, transparent 35%),
-    radial-gradient(circle at bottom right, #eee5ff 0, transparent 35%),
-    #faf8ff;
+background-color: #f7f2ff;
 
-color: #463c4b;
-line-height: 1.7;
+color: #4f4350;
+
+line-height: 1.6;
 
 
 }
 
 .container {
-width: min(100% - 32px, 1050px);
+width: 90%;
+max-width: 1000px;
+
 margin: 0 auto;
+
+
 }
 
-/* =========================================
+/* ==============================
 CABEÇALHO
-========================================= */
+================================= */
 
 .cabecalho {
-position: relative;
+background: linear-gradient(135deg, #ffd6e7, #e7d6ff);
 
-padding: 55px 20px 40px;
+padding: 40px 20px;
 
 text-align: center;
 
-background:
-    linear-gradient(
-        135deg,
-        #ffd8eb,
-        #eadbff,
-        #d9f3ff
-    );
-
-border-bottom: 5px solid #c9a6df;
-
-box-shadow:
-    0 8px 25px rgba(100, 70, 110, 0.12);
+border-bottom: 5px solid #d9b6e8;
 
 
 }
 
 .icone {
-display: inline-block;
-
-font-size: 52px;
-
-animation: flutuar 3s ease-in-out infinite;
-
-
-}
-
-@keyframes flutuar {
-
-0%,
-100% {
-    transform: translateY(0);
-}
-
-50% {
-    transform: translateY(-8px);
-}
-
-
+font-size: 42px;
 }
 
 .cabecalho h1 {
-margin: 12px 0 8px;
+margin: 10px 0;
 
-color: #67466b;
+color: #694b69;
 
-font-size: clamp(2rem, 5vw, 3.2rem);
-
-letter-spacing: -1px;
+font-size: 3rem;
 
 
 }
 
 .frase {
-max-width: 700px;
+margin: 0;
 
-margin: 0 auto;
-
-color: #715d73;
+color: #765b70;
 
 font-size: 1.1rem;
 
@@ -107,17 +75,16 @@ font-style: italic;
 
 }
 
-/* =========================================
+/* ==============================
 MENU
-========================================= */
+================================= */
 
 .menu {
 display: flex;
 
 justify-content: center;
-flex-wrap: wrap;
 
-gap: 12px;
+gap: 20px;
 
 margin-top: 25px;
 
@@ -125,82 +92,85 @@ margin-top: 25px;
 }
 
 .menu a {
-padding: 9px 18px;
+padding: 8px 16px;
 
-color: #684d6d;
-
-background-color: rgba(255, 255, 255, 0.65);
-
-border: 1px solid rgba(130, 90, 140, 0.15);
-
-border-radius: 30px;
+color: #694b69;
 
 text-decoration: none;
 
-font-weight: bold;
+background-color: #ffffff;
 
-transition:
-    transform 0.2s ease,
-    background-color 0.2s ease,
-    box-shadow 0.2s ease;
+border-radius: 20px;
 
 
 }
 
 .menu a:hover {
-background-color: #ffffff;
-
-transform: translateY(-2px);
-
-box-shadow:
-    0 5px 15px rgba(100, 70, 110, 0.12);
-
-
+background-color: #f5e5f7;
 }
 
-/* =========================================
-CONTEÚDO PRINCIPAL
-========================================= */
+/* ==============================
+CONTEÚDO
+================================= */
 
 main {
-padding: 45px 0;
+padding: 40px 0;
 }
 
-.post {
-overflow: hidden;
+/*
+FLEXBOX
 
-padding: 38px;
+O article agora utiliza Flexbox.
+O flex-direction: row coloca os
+elementos lado a lado.
+*/
+
+article {
+display: flex;
+
+flex-direction: row;
+
+flex-wrap: wrap;
+
+justify-content: space-between;
+
+align-items: center;
+
+gap: 25px;
+
+padding: 35px;
 
 background-color: #ffffff;
 
-border: 2px solid #eadff1;
+border: 2px solid #eadcf0;
 
-border-radius: 26px;
+border-radius: 24px;
 
-box-shadow:
-    0 15px 40px rgba(90, 65, 100, 0.10);
+box-shadow: 0 10px 30px rgba(102, 75, 105, 0.12);
 
 
 }
 
+/* ==============================
+CABEÇALHO DO POST
+================================= */
+
 .post-cabecalho {
-margin-bottom: 25px;
+flex: 1;
+
+min-width: 280px;
+
+
 }
 
 .categoria {
 display: inline-block;
 
-padding: 6px 13px;
+padding: 6px 12px;
 
-margin-bottom: 10px;
+background-color: #f5e5f7;
 
-background: linear-gradient(
-    135deg,
-    #f7e7f8,
-    #eee5ff
-);
-
-color: #805889;
+color: #8b5f8e;
 
 border-radius: 20px;
 
@@ -212,13 +182,11 @@ font-weight: bold;
 }
 
 .post h2 {
-margin: 6px 0 8px;
+margin: 5px 0 8px;
 
-color: #8f5687;
+color: #9b5f91;
 
-font-size: clamp(1.7rem, 4vw, 2.3rem);
-
-line-height: 1.25;
+font-size: 2rem;
 
 
 }
@@ -226,104 +194,85 @@ line-height: 1.25;
 .autor {
 margin: 0;
 
-color: #8c7b8d;
+color: #897587;
 
 
 }
 
-/* =========================================
-IMAGEM PRINCIPAL
-========================================= */
+/* ==============================
+IMAGEM
+================================= */
 
 .imagem-principal {
-display: block;
+flex: 1;
 
-width: min(100%, 430px);
+width: 100%;
+
+max-width: 350px;
 
 height: auto;
 
-margin: 30px auto;
+margin: 0;
 
 padding: 8px;
 
 background-color: #ffffff;
 
-border: 3px solid #ead5e8;
+border: 3px solid #efd7eb;
 
-border-radius: 22px;
-
-box-shadow:
-    0 12px 28px rgba(100, 70, 110, 0.15);
-
-transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+border-radius: 20px;
 
 
 }
 
-.imagem-principal:hover {
-transform: scale(1.02);
-
-box-shadow:
-    0 16px 35px rgba(100, 70, 110, 0.20);
-
-
-}
+/* ==============================
+INTRODUÇÃO
+================================= */
 
 .introducao {
-max-width: 850px;
+flex: 1 1 100%;
 
-margin: 25px auto;
+margin: 10px 0;
 
 font-size: 1.08rem;
 
 
 }
 
-/* =========================================
-SEÇÃO DE CONTEÚDOS
-========================================= */
+/* ==============================
+SEÇÃO DE APRENDIZADO
+================================= */
 
 .aprendizado {
-margin-top: 45px;
+flex: 1 1 100%;
 
 padding: 30px;
 
-background:
-    linear-gradient(
-        135deg,
-        #fffbea,
-        #fff7fb
-    );
+background-color: #fff9e8;
 
-border: 2px solid #f0dfb9;
+border: 2px solid #f1dfb4;
 
-border-radius: 22px;
+border-radius: 20px;
 
 
 }
 
-.aprendizado > h2 {
+.aprendizado h2 {
 margin-top: 0;
 
-color: #865f78;
+color: #8d657c;
 
 
 }
 
-.aprendizado > p {
-color: #655762;
-}
-
-/* =========================================
+/* ==============================
 CARDS
-========================================= */
+================================= */
 
 .cards {
-display: grid;
+display: flex;
 
-grid-template-columns: repeat(2, 1fr);
+flex-direction: column;
 
 gap: 20px;
 
@@ -332,143 +281,145 @@ margin-top: 25px;
 
 }
 
-.card {
-position: relative;
+/*
+Cada card ocupa 100% da largura.
 
-padding: 25px;
+O flex: 1 1 100% é exatamente o tipo
+de propriedade trabalhada no exercício.
+*/
+
+.card {
+display: flex;
+
+flex: 1 1 100%;
+
+flex-direction: row;
+
+align-items: center;
+
+gap: 20px;
+
+width: 100%;
+
+padding: 24px;
 
 background-color: #ffffff;
 
-border: 2px solid #eadff0;
+border: 2px solid #eaddec;
 
-border-radius: 20px;
+border-radius: 18px;
 
 transition:
     transform 0.25s ease,
-    box-shadow 0.25s ease,
-    border-color 0.25s ease;
+    box-shadow 0.25s ease;
 
 
 }
 
 .card:hover {
-transform: translateY(-7px);
-
-border-color: #d7b9df;
+transform: translateY(-5px);
 
 box-shadow:
-    0 12px 28px rgba(100, 70, 110, 0.14);
+    0 10px 25px rgba(105, 70, 110, 0.14);
 
 
 }
 
 .card-icone {
-font-size: 36px;
+font-size: 35px;
+
+flex-shrink: 0;
+
+
 }
 
 .card h3 {
-margin: 10px 0;
+margin: 0 0 8px;
 
-color: #925d8c;
+color: #965f8e;
 
 
 }
 
 .card p {
-margin-bottom: 0;
+margin: 0;
 
-color: #665963;
+color: #665961;
 
 
 }
 
-/* =========================================
-POSTS DE MATEMÁTICA
-========================================= */
+/* ==============================
+ALIGN-SELF
+================================= */
+
+/*
+O align-self permite alterar o
+alinhamento de apenas um elemento.
+
+Aqui o segundo ícone é colocado
+no início do eixo transversal.
+*/
+
+.card:nth-child(2) .card-icone {
+align-self: flex-start;
+}
+
+/* ==============================
+CONTEÚDOS DE MATEMÁTICA
+================================= */
 
 .conteudo-matematica {
-margin-top: 35px;
+flex: 1 1 100%;
 
 padding: 30px;
 
-background:
-    linear-gradient(
-        135deg,
-        #ffffff,
-        #fcf8ff
-    );
+background-color: #ffffff;
 
-border: 2px solid #e9dff0;
+border: 2px solid #eaddec;
 
-border-radius: 22px;
-
-box-shadow:
-    0 8px 22px rgba(100, 70, 110, 0.06);
+border-radius: 20px;
 
 
 }
 
 .conteudo-matematica h2 {
-margin-top: 5px;
-
-color: #875481;
-
-
+color: #965f8e;
 }
 
-.conteudo-matematica p {
-color: #514751;
-}
-
-/* =========================================
-FÓRMULAS MATEMÁTICAS
-========================================= */
+/* ==============================
+FÓRMULAS
+================================= */
 
 .formula {
 width: fit-content;
 
-max-width: 100%;
+margin: 20px auto;
 
-margin: 22px auto;
+padding: 15px 25px;
 
-padding: 16px 25px;
-
-background:
-    linear-gradient(
-        135deg,
-        #f3e8ff,
-        #ffeaf5
-    );
+background-color: #f3e8ff;
 
 color: #754d79;
 
 border: 2px solid #dfc8e6;
 
-border-radius: 15px;
+border-radius: 12px;
 
 text-align: center;
 
-font-family: Georgia, "Times New Roman", serif;
-
-font-size: 1.15rem;
-
-box-shadow:
-    0 5px 15px rgba(100, 70, 110, 0.08);
+font-size: 1.1rem;
 
 
 }
 
 .formula.grande {
-font-size: 1.7rem;
-
-padding: 20px 35px;
-
-
+font-size: 1.6rem;
 }
 
-/* =========================================
-NÚMEROS PRIMOS
-========================================= */
+/* ==============================
+NÚMEROS
+================================= */
 
 .numeros {
 display: flex;
@@ -479,7 +430,7 @@ justify-content: center;
 
 gap: 10px;
 
-margin: 25px 0;
+margin: 20px 0;
 
 
 }
@@ -488,130 +439,84 @@ margin: 25px 0;
 display: flex;
 
 align-items: center;
+
 justify-content: center;
 
-width: 48px;
-height: 48px;
+width: 45px;
 
-background:
-    linear-gradient(
-        135deg,
-        #eadcff,
-        #ffddec
-    );
+height: 45px;
+
+background-color: #eadcff;
 
 color: #704d76;
-
-border: 2px solid #dbc5e7;
 
 border-radius: 50%;
 
 font-weight: bold;
 
-transition:
-    transform 0.2s ease;
-
 
 }
 
-.numeros span:hover {
-transform: scale(1.12) rotate(5deg);
-}
-
-/* =========================================
+/* ==============================
 CURIOSIDADE
-========================================= */
+================================= */
 
 .curiosidade {
-margin-top: 25px;
-
 padding: 20px;
 
 background-color: #fff7d9;
 
 border-left: 6px solid #e7c85b;
 
-border-radius: 12px;
-
-color: #66582d;
+border-radius: 10px;
 
 
 }
 
-.curiosidade p {
-margin-bottom: 0;
-}
-
-/* =========================================
+/* ==============================
 DESAFIO
-========================================= */
+================================= */
 
 .desafio {
-margin-top: 40px;
+flex: 1 1 100%;
 
-padding: 32px;
+padding: 30px;
 
-background:
-    linear-gradient(
-        135deg,
-        #e9ddff,
-        #ffe4f1
-    );
+background: linear-gradient(
+    135deg,
+    #e9ddff,
+    #ffe4f1
+);
 
 border: 2px solid #d6bfe4;
 
-border-radius: 24px;
-
-box-shadow:
-    0 10px 25px rgba(100, 70, 110, 0.10);
+border-radius: 20px;
 
 
 }
 
 .desafio h2 {
-margin-top: 5px;
-
 color: #774d78;
-
-
-}
-
-.desafio p {
-color: #554958;
 }
 
 .dica {
-margin: 22px 0;
-
 padding: 18px;
 
-background-color: rgba(255, 255, 255, 0.7);
+background-color: #ffffffaa;
 
-border-radius: 14px;
-
-border: 1px solid rgba(130, 90, 140, 0.15);
+border-radius: 12px;
 
 
 }
-
-.dica p {
-margin-bottom: 0;
-}
-
-/* =========================================
-RESPOSTA DO DESAFIO
-========================================= */
 
 details {
 margin-top: 20px;
 
-padding: 15px 18px;
+padding: 15px;
 
-background-color: rgba(255, 255, 255, 0.75);
+background-color: #ffffff;
 
-border: 2px solid #d8c3e2;
-
-border-radius: 15px;
+border-radius: 12px;
 
 
 }
@@ -626,22 +531,18 @@ font-weight: bold;
 
 }
 
-details p {
-margin-bottom: 10px;
-}
-
-/* =========================================
+/* ==============================
 REAÇÕES
-========================================= */
+================================= */
 
 .reacoes {
-margin-top: 45px;
+flex: 1 1 100%;
 
 padding-top: 30px;
 
-border-top: 2px solid #eee3ef;
-
 text-align: center;
+
+border-top: 2px solid #eee3ef;
 
 
 }
@@ -665,11 +566,11 @@ gap: 10px;
 .reacao {
 padding: 11px 18px;
 
-background-color: #ffe2ee;
+background-color: #ffe0ed;
 
 color: #674d60;
 
-border: 2px solid #f2c9dc;
+border: 2px solid #f3c7dc;
 
 border-radius: 12px;
 
@@ -679,23 +580,11 @@ font-weight: bold;
 
 cursor: pointer;
 
-transition:
-    transform 0.2s ease,
-    background-color 0.2s ease,
-    box-shadow 0.2s ease;
-
 
 }
 
 .reacao:hover {
 background-color: #f8c3da;
-
-transform: translateY(-3px);
-
-box-shadow:
-    0 6px 15px rgba(130, 70, 100, 0.12);
-
-
 }
 
 .reacao:focus {
@@ -706,43 +595,24 @@ outline-offset: 2px;
 
 }
 
-.reacao:disabled {
-opacity: 0.6;
-
-cursor: not-allowed;
-
-transform: none;
-
-
-}
-
 #mensagem {
 min-height: 25px;
 
-margin-top: 18px;
-
-color: #925d8c;
+color: #9b5f91;
 
 font-weight: bold;
 
 
 }
 
-/* =========================================
+/* ==============================
 RODAPÉ
-========================================= */
+================================= */
 
 .rodape {
-margin-top: 20px;
+padding: 30px 20px;
 
-padding: 32px 20px;
-
-background:
-    linear-gradient(
-        135deg,
-        #604662,
-        #765177
-    );
+background-color: #694b69;
 
 color: #ffffff;
 
@@ -753,103 +623,69 @@ text-align: center;
 
 .rodape p {
 margin: 5px;
-
-opacity: 0.95;
-
-
 }
 
-/* =========================================
-SELEÇÃO DE TEXTO
-========================================= */
-
-::selection {
-background-color: #dcbbe5;
-
-color: #49354c;
-
-
-}
-
-/* =========================================
-RESPONSIVIDADE — TABLETS
-========================================= */
+/* ==============================
+RESPONSIVIDADE
+================================= */
 
 @media (max-width: 700px) {
 
-.cabecalho {
-    padding: 40px 15px 30px;
+article {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    padding: 22px;
+}
+
+.post-cabecalho {
+    width: 100%;
+}
+
+.imagem-principal {
+    margin: 20px auto;
+}
+
+.card {
+    flex-direction: column;
+
+    text-align: center;
+}
+
+.card:nth-child(2) .card-icone {
+    align-self: flex-start;
+}
+
+.menu {
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+}
+
+@media (max-width: 450px) {
+
+.container {
+    width: 95%;
 }
 
 .cabecalho h1 {
     font-size: 2rem;
 }
 
-.post {
-    padding: 25px;
-}
-
-.aprendizado,
-.conteudo-matematica,
-.desafio {
-    padding: 22px;
-}
-
-.cards {
-    grid-template-columns: 1fr;
-}
-
-.formula {
-    font-size: 1rem;
-
-    padding: 14px 18px;
-}
-
-.formula.grande {
-    font-size: 1.4rem;
-
-    padding: 18px 25px;
-}
-
-
-}
-
-/* =========================================
-RESPONSIVIDADE — CELULARES
-========================================= */
-
-@media (max-width: 450px) {
-
-.container {
-    width: min(100% - 20px, 1050px);
-}
-
-main {
-    padding: 20px 0;
-}
-
-.post {
+article {
     padding: 16px;
 
-    border-radius: 18px;
+    border-radius: 16px;
 }
 
 .aprendizado,
 .conteudo-matematica,
 .desafio {
     padding: 18px;
-
-    border-radius: 17px;
-}
-
-.menu {
-    flex-direction: column;
-
-    align-items: stretch;
-}
-
-.menu a {
-    display: block;
 }
 
 .botoes-reacao {
@@ -858,23 +694,6 @@ main {
 
 .reacao {
     width: 100%;
-}
-
-.numeros span {
-    width: 42px;
-    height: 42px;
-}
-
-.formula {
-    width: 100%;
-
-    overflow-x: auto;
-
-    font-size: 0.95rem;
-}
-
-.formula.grande {
-    font-size: 1.2rem;
 }
 
 
