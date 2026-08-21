@@ -1,376 +1,881 @@
-/* ==============================
-   CONFIGURAÇÕES GERAIS
-================================= */
+/* =========================================
+CONFIGURAÇÕES GERAIS
+========================================= */
 
-* {
-    box-sizing: border-box;
+{
+box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg, #fff7fb, #f7f2ff);
-    color: #4f4350;
-    line-height: 1.6;
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+
+background:
+    radial-gradient(circle at top left, #fff0f8 0, transparent 35%),
+    radial-gradient(circle at bottom right, #eee5ff 0, transparent 35%),
+    #faf8ff;
+
+color: #463c4b;
+line-height: 1.7;
+
+
 }
 
 .container {
-    width: min(100% - 32px, 1000px);
-    margin: 0 auto;
+width: min(100% - 32px, 1050px);
+margin: 0 auto;
 }
 
-
-/* ==============================
-   CABEÇALHO
-================================= */
+/* =========================================
+CABEÇALHO
+========================================= */
 
 .cabecalho {
-    background: linear-gradient(135deg, #ffd6e7, #e7d6ff);
-    padding: 45px 20px;
-    text-align: center;
-    border-bottom: 5px solid #d9b6e8;
+position: relative;
+
+padding: 55px 20px 40px;
+
+text-align: center;
+
+background:
+    linear-gradient(
+        135deg,
+        #ffd8eb,
+        #eadbff,
+        #d9f3ff
+    );
+
+border-bottom: 5px solid #c9a6df;
+
+box-shadow:
+    0 8px 25px rgba(100, 70, 110, 0.12);
+
+
 }
 
 .icone {
-    font-size: 42px;
+display: inline-block;
+
+font-size: 52px;
+
+animation: flutuar 3s ease-in-out infinite;
+
+
+}
+
+@keyframes flutuar {
+
+0%,
+100% {
+    transform: translateY(0);
+}
+
+50% {
+    transform: translateY(-8px);
+}
+
+
 }
 
 .cabecalho h1 {
-    margin: 10px 0;
-    color: #694b69;
-    font-size: clamp(2rem, 5vw, 3rem);
+margin: 12px 0 8px;
+
+color: #67466b;
+
+font-size: clamp(2rem, 5vw, 3.2rem);
+
+letter-spacing: -1px;
+
+
 }
 
 .frase {
-    margin: 0;
-    color: #765b70;
-    font-size: 1.1rem;
-    font-style: italic;
+max-width: 700px;
+
+margin: 0 auto;
+
+color: #715d73;
+
+font-size: 1.1rem;
+
+font-style: italic;
+
+
 }
 
+/* =========================================
+MENU
+========================================= */
 
-/* ==============================
-   CONTEÚDO PRINCIPAL
-================================= */
+.menu {
+display: flex;
+
+justify-content: center;
+flex-wrap: wrap;
+
+gap: 12px;
+
+margin-top: 25px;
+
+
+}
+
+.menu a {
+padding: 9px 18px;
+
+color: #684d6d;
+
+background-color: rgba(255, 255, 255, 0.65);
+
+border: 1px solid rgba(130, 90, 140, 0.15);
+
+border-radius: 30px;
+
+text-decoration: none;
+
+font-weight: bold;
+
+transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+
+}
+
+.menu a:hover {
+background-color: #ffffff;
+
+transform: translateY(-2px);
+
+box-shadow:
+    0 5px 15px rgba(100, 70, 110, 0.12);
+
+
+}
+
+/* =========================================
+CONTEÚDO PRINCIPAL
+========================================= */
 
 main {
-    padding: 40px 0;
+padding: 45px 0;
 }
 
 .post {
-    background-color: #ffffff;
-    padding: 35px;
-    border: 2px solid #eadcf0;
-    border-radius: 24px;
-    box-shadow: 0 10px 30px rgba(102, 75, 105, 0.12);
+overflow: hidden;
+
+padding: 38px;
+
+background-color: #ffffff;
+
+border: 2px solid #eadff1;
+
+border-radius: 26px;
+
+box-shadow:
+    0 15px 40px rgba(90, 65, 100, 0.10);
+
+
 }
 
 .post-cabecalho {
-    margin-bottom: 25px;
+margin-bottom: 25px;
 }
 
 .categoria {
-    display: inline-block;
-    padding: 6px 12px;
-    margin-bottom: 10px;
+display: inline-block;
 
-    background-color: #f5e5f7;
-    color: #8b5f8e;
+padding: 6px 13px;
 
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: bold;
+margin-bottom: 10px;
+
+background: linear-gradient(
+    135deg,
+    #f7e7f8,
+    #eee5ff
+);
+
+color: #805889;
+
+border-radius: 20px;
+
+font-size: 0.85rem;
+
+font-weight: bold;
+
+
 }
 
 .post h2 {
-    margin: 5px 0 8px;
-    color: #9b5f91;
-    font-size: 2rem;
+margin: 6px 0 8px;
+
+color: #8f5687;
+
+font-size: clamp(1.7rem, 4vw, 2.3rem);
+
+line-height: 1.25;
+
+
 }
 
 .autor {
-    margin: 0;
-    color: #897587;
+margin: 0;
+
+color: #8c7b8d;
+
+
 }
 
-
-/* ==============================
-   IMAGEM
-================================= */
+/* =========================================
+IMAGEM PRINCIPAL
+========================================= */
 
 .imagem-principal {
-    display: block;
-    width: min(100%, 350px);
-    height: auto;
+display: block;
 
-    margin: 25px auto;
-    padding: 8px;
+width: min(100%, 430px);
 
-    background-color: #ffffff;
-    border: 3px solid #efd7eb;
-    border-radius: 20px;
+height: auto;
 
-    box-shadow: 0 8px 20px rgba(120, 80, 120, 0.15);
+margin: 30px auto;
+
+padding: 8px;
+
+background-color: #ffffff;
+
+border: 3px solid #ead5e8;
+
+border-radius: 22px;
+
+box-shadow:
+    0 12px 28px rgba(100, 70, 110, 0.15);
+
+transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+
+}
+
+.imagem-principal:hover {
+transform: scale(1.02);
+
+box-shadow:
+    0 16px 35px rgba(100, 70, 110, 0.20);
+
+
 }
 
 .introducao {
-    max-width: 800px;
-    margin: 25px auto;
-    font-size: 1.08rem;
+max-width: 850px;
+
+margin: 25px auto;
+
+font-size: 1.08rem;
+
+
 }
 
-
-/* ==============================
-   SEÇÃO DE APRENDIZADO
-================================= */
+/* =========================================
+SEÇÃO DE CONTEÚDOS
+========================================= */
 
 .aprendizado {
-    margin-top: 45px;
-    padding: 30px;
+margin-top: 45px;
 
-    background: #fff9e8;
-    border: 2px solid #f1dfb4;
-    border-radius: 20px;
+padding: 30px;
+
+background:
+    linear-gradient(
+        135deg,
+        #fffbea,
+        #fff7fb
+    );
+
+border: 2px solid #f0dfb9;
+
+border-radius: 22px;
+
+
 }
 
 .aprendizado > h2 {
-    margin-top: 0;
-    color: #8d657c;
+margin-top: 0;
+
+color: #865f78;
+
+
 }
 
 .aprendizado > p {
-    color: #65565f;
+color: #655762;
 }
 
-
-/* ==============================
-   CARDS
-================================= */
+/* =========================================
+CARDS
+========================================= */
 
 .cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-top: 25px;
+display: grid;
+
+grid-template-columns: repeat(2, 1fr);
+
+gap: 20px;
+
+margin-top: 25px;
+
+
 }
 
 .card {
-    padding: 24px;
+position: relative;
 
-    background-color: #ffffff;
-    border: 2px solid #eaddec;
-    border-radius: 18px;
+padding: 25px;
 
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+background-color: #ffffff;
+
+border: 2px solid #eadff0;
+
+border-radius: 20px;
+
+transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+
+
 }
 
 .card:hover {
-    transform: translateY(-5px);
+transform: translateY(-7px);
 
-    box-shadow:
-        0 10px 25px rgba(105, 70, 110, 0.14);
+border-color: #d7b9df;
+
+box-shadow:
+    0 12px 28px rgba(100, 70, 110, 0.14);
+
+
 }
 
 .card-icone {
-    font-size: 32px;
+font-size: 36px;
 }
 
 .card h3 {
-    margin: 10px 0;
-    color: #965f8e;
+margin: 10px 0;
+
+color: #925d8c;
+
+
 }
 
 .card p {
-    margin-bottom: 0;
-    color: #665961;
+margin-bottom: 0;
+
+color: #665963;
+
+
 }
 
-code {
-    padding: 3px 7px;
+/* =========================================
+POSTS DE MATEMÁTICA
+========================================= */
 
-    background-color: #f1e7f4;
-    color: #7c4d75;
+.conteudo-matematica {
+margin-top: 35px;
 
-    border-radius: 6px;
-    font-family: Consolas, monospace;
+padding: 30px;
+
+background:
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #fcf8ff
+    );
+
+border: 2px solid #e9dff0;
+
+border-radius: 22px;
+
+box-shadow:
+    0 8px 22px rgba(100, 70, 110, 0.06);
+
+
 }
 
+.conteudo-matematica h2 {
+margin-top: 5px;
 
-/* ==============================
-   CONCLUSÃO
-================================= */
+color: #875481;
 
-.conclusao {
-    display: flex;
-    gap: 18px;
-    align-items: flex-start;
 
-    margin-top: 25px;
-    padding: 22px;
-
-    background: linear-gradient(135deg, #f4e8ff, #ffeaf5);
-
-    border-left: 6px solid #bd83b7;
-    border-radius: 12px;
 }
 
-.conclusao-icone {
-    font-size: 30px;
+.conteudo-matematica p {
+color: #514751;
 }
 
-.conclusao h3 {
-    margin: 0 0 5px;
-    color: #87537f;
+/* =========================================
+FÓRMULAS MATEMÁTICAS
+========================================= */
+
+.formula {
+width: fit-content;
+
+max-width: 100%;
+
+margin: 22px auto;
+
+padding: 16px 25px;
+
+background:
+    linear-gradient(
+        135deg,
+        #f3e8ff,
+        #ffeaf5
+    );
+
+color: #754d79;
+
+border: 2px solid #dfc8e6;
+
+border-radius: 15px;
+
+text-align: center;
+
+font-family: Georgia, "Times New Roman", serif;
+
+font-size: 1.15rem;
+
+box-shadow:
+    0 5px 15px rgba(100, 70, 110, 0.08);
+
+
 }
 
-.conclusao p {
-    margin: 0;
+.formula.grande {
+font-size: 1.7rem;
+
+padding: 20px 35px;
+
+
 }
 
+/* =========================================
+NÚMEROS PRIMOS
+========================================= */
 
-/* ==============================
-   REAÇÕES
-================================= */
+.numeros {
+display: flex;
+
+flex-wrap: wrap;
+
+justify-content: center;
+
+gap: 10px;
+
+margin: 25px 0;
+
+
+}
+
+.numeros span {
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+width: 48px;
+height: 48px;
+
+background:
+    linear-gradient(
+        135deg,
+        #eadcff,
+        #ffddec
+    );
+
+color: #704d76;
+
+border: 2px solid #dbc5e7;
+
+border-radius: 50%;
+
+font-weight: bold;
+
+transition:
+    transform 0.2s ease;
+
+
+}
+
+.numeros span:hover {
+transform: scale(1.12) rotate(5deg);
+}
+
+/* =========================================
+CURIOSIDADE
+========================================= */
+
+.curiosidade {
+margin-top: 25px;
+
+padding: 20px;
+
+background-color: #fff7d9;
+
+border-left: 6px solid #e7c85b;
+
+border-radius: 12px;
+
+color: #66582d;
+
+
+}
+
+.curiosidade p {
+margin-bottom: 0;
+}
+
+/* =========================================
+DESAFIO
+========================================= */
+
+.desafio {
+margin-top: 40px;
+
+padding: 32px;
+
+background:
+    linear-gradient(
+        135deg,
+        #e9ddff,
+        #ffe4f1
+    );
+
+border: 2px solid #d6bfe4;
+
+border-radius: 24px;
+
+box-shadow:
+    0 10px 25px rgba(100, 70, 110, 0.10);
+
+
+}
+
+.desafio h2 {
+margin-top: 5px;
+
+color: #774d78;
+
+
+}
+
+.desafio p {
+color: #554958;
+}
+
+.dica {
+margin: 22px 0;
+
+padding: 18px;
+
+background-color: rgba(255, 255, 255, 0.7);
+
+border-radius: 14px;
+
+border: 1px solid rgba(130, 90, 140, 0.15);
+
+
+}
+
+.dica p {
+margin-bottom: 0;
+}
+
+/* =========================================
+RESPOSTA DO DESAFIO
+========================================= */
+
+details {
+margin-top: 20px;
+
+padding: 15px 18px;
+
+background-color: rgba(255, 255, 255, 0.75);
+
+border: 2px solid #d8c3e2;
+
+border-radius: 15px;
+
+
+}
+
+summary {
+color: #754d79;
+
+cursor: pointer;
+
+font-weight: bold;
+
+
+}
+
+details p {
+margin-bottom: 10px;
+}
+
+/* =========================================
+REAÇÕES
+========================================= */
 
 .reacoes {
-    margin-top: 45px;
-    padding-top: 30px;
+margin-top: 45px;
 
-    border-top: 2px solid #eee3ef;
+padding-top: 30px;
 
-    text-align: center;
+border-top: 2px solid #eee3ef;
+
+text-align: center;
+
+
 }
 
 .reacoes h2 {
-    color: #8f6088;
+color: #8f6088;
 }
 
 .botoes-reacao {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+display: flex;
+
+flex-wrap: wrap;
+
+justify-content: center;
+
+gap: 10px;
+
+
 }
 
 .reacao {
-    padding: 11px 18px;
+padding: 11px 18px;
 
-    background-color: #ffe0ed;
-    color: #674d60;
+background-color: #ffe2ee;
 
-    border: 2px solid #f3c7dc;
-    border-radius: 12px;
+color: #674d60;
 
-    font-size: 1rem;
-    font-weight: bold;
+border: 2px solid #f2c9dc;
 
-    cursor: pointer;
+border-radius: 12px;
 
-    transition:
-        transform 0.2s ease,
-        background-color 0.2s ease;
+font-size: 1rem;
+
+font-weight: bold;
+
+cursor: pointer;
+
+transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+
 }
 
 .reacao:hover {
-    background-color: #f8c3da;
-    transform: translateY(-2px);
+background-color: #f8c3da;
+
+transform: translateY(-3px);
+
+box-shadow:
+    0 6px 15px rgba(130, 70, 100, 0.12);
+
+
 }
 
 .reacao:focus {
-    outline: 3px solid #b98bc0;
-    outline-offset: 2px;
+outline: 3px solid #b98bc0;
+
+outline-offset: 2px;
+
+
 }
 
 .reacao:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-    transform: none;
+opacity: 0.6;
+
+cursor: not-allowed;
+
+transform: none;
+
+
 }
 
 #mensagem {
-    min-height: 25px;
-    margin-top: 18px;
+min-height: 25px;
 
-    color: #9b5f91;
-    font-weight: bold;
+margin-top: 18px;
+
+color: #925d8c;
+
+font-weight: bold;
+
+
 }
 
-
-/* ==============================
-   RODAPÉ
-================================= */
+/* =========================================
+RODAPÉ
+========================================= */
 
 .rodape {
-    padding: 30px 20px;
+margin-top: 20px;
 
-    background-color: #694b69;
-    color: #ffffff;
+padding: 32px 20px;
 
-    text-align: center;
+background:
+    linear-gradient(
+        135deg,
+        #604662,
+        #765177
+    );
+
+color: #ffffff;
+
+text-align: center;
+
+
 }
 
 .rodape p {
-    margin: 5px;
+margin: 5px;
+
+opacity: 0.95;
+
+
 }
 
+/* =========================================
+SELEÇÃO DE TEXTO
+========================================= */
 
-/* ==============================
-   RESPONSIVIDADE
-================================= */
+::selection {
+background-color: #dcbbe5;
+
+color: #49354c;
+
+
+}
+
+/* =========================================
+RESPONSIVIDADE — TABLETS
+========================================= */
 
 @media (max-width: 700px) {
 
-    .post {
-        padding: 22px;
-    }
-
-    .aprendizado {
-        padding: 20px;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    .conclusao {
-        flex-direction: column;
-    }
-
-    .cabecalho {
-        padding: 35px 15px;
-    }
+.cabecalho {
+    padding: 40px 15px 30px;
 }
+
+.cabecalho h1 {
+    font-size: 2rem;
+}
+
+.post {
+    padding: 25px;
+}
+
+.aprendizado,
+.conteudo-matematica,
+.desafio {
+    padding: 22px;
+}
+
+.cards {
+    grid-template-columns: 1fr;
+}
+
+.formula {
+    font-size: 1rem;
+
+    padding: 14px 18px;
+}
+
+.formula.grande {
+    font-size: 1.4rem;
+
+    padding: 18px 25px;
+}
+
+
+}
+
+/* =========================================
+RESPONSIVIDADE — CELULARES
+========================================= */
 
 @media (max-width: 450px) {
 
-    .container {
-        width: min(100% - 20px, 1000px);
-    }
+.container {
+    width: min(100% - 20px, 1050px);
+}
 
-    main {
-        padding: 20px 0;
-    }
+main {
+    padding: 20px 0;
+}
 
-    .post {
-        padding: 16px;
-        border-radius: 16px;
-    }
+.post {
+    padding: 16px;
 
-    .aprendizado {
-        padding: 16px;
-    }
+    border-radius: 18px;
+}
 
-    .botoes-reacao {
-        flex-direction: column;
-    }
+.aprendizado,
+.conteudo-matematica,
+.desafio {
+    padding: 18px;
 
-    .reacao {
-        width: 100%;
-    }
+    border-radius: 17px;
+}
+
+.menu {
+    flex-direction: column;
+
+    align-items: stretch;
+}
+
+.menu a {
+    display: block;
+}
+
+.botoes-reacao {
+    flex-direction: column;
+}
+
+.reacao {
+    width: 100%;
+}
+
+.numeros span {
+    width: 42px;
+    height: 42px;
+}
+
+.formula {
+    width: 100%;
+
+    overflow-x: auto;
+
+    font-size: 0.95rem;
+}
+
+.formula.grande {
+    font-size: 1.2rem;
+}
+
+
 }
