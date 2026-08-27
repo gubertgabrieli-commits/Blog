@@ -1,14 +1,21 @@
-<!DOCTYPE html> <html lang="pt-BR"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Matemática Sem Mistérios</title>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta
-    name="description"
-    content="Aprenda matemática de forma simples, divertida e sem complicações."
->
+    <title>Matemática Sem Mistérios</title>
 
-<link rel="stylesheet" href="style.css">
+    <meta
+        name="description"
+        content="Aprenda matemática de forma simples, divertida e sem complicações."
+    >
 
-</head> <body>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
 <header class="cabecalho">
     <div class="container">
 
@@ -26,13 +33,23 @@
             <a href="#desafio">Desafio</a>
         </nav>
 
+        <div class="botoes-fixos">
+            <button id="btn-tema" class="btn-tema" type="button">
+                🌙 Modo escuro
+            </button>
+
+            <button class="btn-voltar-topo" type="button">
+                ⬆️ Voltar ao topo
+            </button>
+        </div>
+
     </div>
 </header>
+
 
 <main class="container" id="inicio">
 
     <!-- POST PRINCIPAL -->
-
     <article class="post">
 
         <div class="post-cabecalho">
@@ -42,16 +59,29 @@
             <h2>Bem-vindo ao Matemática Sem Mistérios!</h2>
 
             <p class="autor">
-                Por <strong>Matemática Sem Mistérios</strong>
+                Por
+                <a href="https://www.google.com/search?q=Matem%C3%A1tica+Sem+Mist%C3%A9rios"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <strong>Matemática Sem Mistérios</strong>
+                </a>
             </p>
 
         </div>
 
-        <img
-            src="matematica.png"
-            alt="Ilustração com símbolos e elementos matemáticos"
-            class="imagem-principal"
+        <!-- IMAGEM TRANSFORMADA EM LINK -->
+        <a
+            href="matematica.png"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-imagem"
         >
+            <img
+                src="matematica.png"
+                alt="Ilustração com símbolos e elementos matemáticos"
+                class="imagem-principal"
+            >
+        </a>
 
         <p class="introducao">
             Você já pensou em quantas vezes usa matemática durante o dia?
@@ -67,333 +97,454 @@
             em algo mais interessante.
         </p>
 
-        <!-- CONTEÚDOS -->
+        <section class="reacoes-post" data-post="principal">
 
-        <section class="aprendizado" id="conteudos">
+            <h3>Qual foi sua reação?</h3>
 
-            <h2>📌 O que vamos aprender?</h2>
+            <div class="botoes-reacao">
 
-            <p>
-                Confira alguns dos assuntos que aparecerão por aqui:
+                <button class="reacao" data-reacao="Gostei" type="button">
+                    👍 Gostei
+                </button>
+
+                <button class="reacao" data-reacao="Amei" type="button">
+                    ❤️ Amei
+                </button>
+
+                <button class="reacao" data-reacao="Incrível" type="button">
+                    🤩 Incrível
+                </button>
+
+                <button class="reacao" data-reacao="Aprendi" type="button">
+                    🧠 Aprendi!
+                </button>
+
+                <button class="reacao" data-reacao="Surpreendente" type="button">
+                    😮 Surpreendente
+                </button>
+
+            </div>
+
+            <p class="contador-reacao">
+                Reações: <strong class="quantidade">0</strong>
             </p>
 
-            <div class="cards">
+            <p class="quem-reagiu" aria-live="polite">
+                Ninguém reagiu ainda.
+            </p>
 
-                <div class="card">
+        </section>
 
-                    <div class="card-icone">💰</div>
+    </article>
 
+
+    <!-- CONTEÚDOS -->
+    <section class="aprendizado" id="conteudos">
+
+        <h2>📌 O que vamos aprender?</h2>
+
+        <p>
+            Confira alguns dos assuntos que aparecerão por aqui:
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-icone">💰</div>
+
+                <div>
                     <h3>1. Porcentagem</h3>
 
                     <p>
                         Aprenda a calcular descontos, aumentos e porcentagens
                         de maneira rápida e fácil.
                     </p>
-
                 </div>
+            </div>
 
-                <div class="card">
+            <div class="card">
+                <div class="card-icone">🔢</div>
 
-                    <div class="card-icone">🔢</div>
-
+                <div>
                     <h3>2. Números Primos</h3>
 
                     <p>
                         Descubra o que são números primos e por que eles são
                         tão importantes na matemática.
                     </p>
-
                 </div>
+            </div>
 
-                <div class="card">
+            <div class="card">
+                <div class="card-icone">📐</div>
 
-                    <div class="card-icone">📐</div>
-
+                <div>
                     <h3>3. Geometria</h3>
 
                     <p>
                         Explore áreas, perímetros, ângulos, triângulos e
                         outras formas geométricas.
                     </p>
-
                 </div>
+            </div>
 
-                <div class="card">
+            <div class="card">
+                <div class="card-icone">🎲</div>
 
-                    <div class="card-icone">🎲</div>
-
+                <div>
                     <h3>4. Probabilidade</h3>
 
                     <p>
                         Entenda como calcular as chances de determinados
                         acontecimentos acontecerem.
                     </p>
-
                 </div>
-
             </div>
 
-        </section>
+        </div>
 
-        <!-- POST 1 -->
+    </section>
 
-        <section class="conteudo-matematica">
 
-            <span class="categoria">💰 Porcentagem</span>
+    <!-- POST 1 -->
+    <article class="conteudo-matematica">
 
-            <h2>Como calcular porcentagens?</h2>
+        <span class="categoria">💰 Porcentagem</span>
 
-            <p>
-                A porcentagem representa uma parte de um total de 100.
-                Por exemplo, 25% significa 25 partes em cada 100.
-            </p>
+        <h2>Como calcular porcentagens?</h2>
 
-            <div class="formula">
+        <p class="autor">
+            Por
+            <a href="https://www.google.com/search?q=Professor+Jo%C3%A3o"
+               target="_blank"
+               rel="noopener noreferrer">
+                <strong>Professor João</strong>
+            </a>
+        </p>
 
-                <strong>25% = 25 ÷ 100 = 0,25</strong>
+        <p>
+            A porcentagem representa uma parte de um total de 100.
+            Por exemplo, 25% significa 25 partes em cada 100.
+        </p>
 
-            </div>
+        <div class="formula">
+            <strong>25% = 25 ÷ 100 = 0,25</strong>
+        </div>
 
-            <p>
-                Imagine que uma mochila custa <strong>R$ 200</strong> e
-                está com <strong>25% de desconto</strong>.
-            </p>
+        <p>
+            Imagine que uma mochila custa <strong>R$ 200</strong> e
+            está com <strong>25% de desconto</strong>.
+        </p>
 
-            <p>
-                Primeiro calculamos o valor do desconto:
-            </p>
+        <p>
+            Primeiro calculamos o valor do desconto:
+        </p>
 
-            <div class="formula">
+        <div class="formula">
+            <strong>200 × 0,25 = 50</strong>
+        </div>
 
-                <strong>200 × 0,25 = 50</strong>
+        <p>
+            Portanto, o desconto é de <strong>R$ 50</strong>.
+        </p>
 
-            </div>
+        <p>
+            Agora basta diminuir o desconto do preço original:
+        </p>
 
-            <p>
-                Portanto, o desconto é de <strong>R$ 50</strong>.
-            </p>
+        <div class="formula">
+            <strong>200 - 50 = R$ 150</strong>
+        </div>
 
-            <p>
-                Agora basta diminuir o desconto do preço original:
-            </p>
+        <p>
+            🎯 O preço final da mochila será <strong>R$ 150</strong>.
+        </p>
 
-            <div class="formula">
+        <div class="reacoes-post" data-post="porcentagem">
 
-                <strong>200 - 50 = R$ 150</strong>
-
-            </div>
-
-            <p>
-                🎯 O preço final da mochila será <strong>R$ 150</strong>.
-            </p>
-
-        </section>
-
-        <!-- POST 2 -->
-
-        <section class="conteudo-matematica">
-
-            <span class="categoria">🔢 Números</span>
-
-            <h2>O que são números primos?</h2>
-
-            <p>
-                Números primos são números naturais maiores que 1 que
-                possuem exatamente dois divisores positivos:
-                <strong>1 e ele mesmo</strong>.
-            </p>
-
-            <p>
-                Alguns exemplos são:
-            </p>
-
-            <div class="numeros">
-
-                <span>2</span>
-                <span>3</span>
-                <span>5</span>
-                <span>7</span>
-                <span>11</span>
-                <span>13</span>
-                <span>17</span>
-                <span>19</span>
-
-            </div>
-
-            <p>
-                O número <strong>2</strong> é especial: ele é o único
-                número primo que também é par.
-            </p>
-
-            <div class="curiosidade">
-
-                💡 <strong>Curiosidade:</strong>
-
-                <p>
-                    Existem infinitos números primos. Isso significa que
-                    nunca chegaremos ao "último" número primo.
-                </p>
-
-            </div>
-
-        </section>
-
-        <!-- POST 3 -->
-
-        <section class="conteudo-matematica">
-
-            <span class="categoria">📐 Geometria</span>
-
-            <h2>Teorema de Pitágoras</h2>
-
-            <p>
-                O Teorema de Pitágoras é utilizado em triângulos retângulos.
-                Sua fórmula é:
-            </p>
-
-            <div class="formula grande">
-
-                <strong>a² + b² = c²</strong>
-
-            </div>
-
-            <p>
-                Imagine um triângulo com lados menores medindo
-                <strong>3 cm</strong> e <strong>4 cm</strong>.
-            </p>
-
-            <p>
-                Podemos descobrir a hipotenusa:
-            </p>
-
-            <div class="formula">
-
-                <strong>
-                    3² + 4² = c²
-                    <br>
-                    9 + 16 = c²
-                    <br>
-                    25 = c²
-                    <br>
-                    c = 5
-                </strong>
-
-            </div>
-
-            <p>
-                Portanto, a hipotenusa mede <strong>5 cm</strong>.
-            </p>
-
-            <p>
-                Esse é um exemplo clássico de um triângulo
-                <strong>3-4-5</strong>.
-            </p>
-
-        </section>
-
-        <!-- DESAFIO -->
-
-        <section class="desafio" id="desafio">
-
-            <span class="categoria">🧠 Desafio Matemático</span>
-
-            <h2>Você consegue resolver?</h2>
-
-            <p>
-                Uma loja vende uma bicicleta por <strong>R$ 800</strong>.
-                Durante uma promoção, ela recebe um desconto de
-                <strong>15%</strong>.
-            </p>
-
-            <p>
-                <strong>Qual será o preço da bicicleta depois do desconto?</strong>
-            </p>
-
-            <div class="dica">
-
-                💡 <strong>Dica:</strong>
-
-                <p>
-                    Primeiro descubra quanto vale 15% de R$ 800.
-                    Depois subtraia esse valor do preço original.
-                </p>
-
-            </div>
-
-            <details>
-
-                <summary>🔎 Ver resposta</summary>
-
-                <p>
-                    15% de 800:
-                </p>
-
-                <div class="formula">
-
-                    <strong>
-                        800 × 0,15 = 120
-                    </strong>
-
-                </div>
-
-                <p>
-                    Agora subtraímos o desconto:
-                </p>
-
-                <div class="formula">
-
-                    <strong>
-                        800 - 120 = R$ 680
-                    </strong>
-
-                </div>
-
-                <p>
-                    🎯 Portanto, o preço final da bicicleta é
-                    <strong>R$ 680</strong>.
-                </p>
-
-            </details>
-
-        </section>
-
-        <!-- REAÇÕES -->
-
-        <section class="reacoes">
-
-            <h2>Qual foi sua reação ao conteúdo?</h2>
+            <h3>Reações desta postagem</h3>
 
             <div class="botoes-reacao">
 
-                <button class="reacao" type="button">
-                    👍 Gostei
-                </button>
-
-                <button class="reacao" type="button">
-                    ❤️ Amei
-                </button>
-
-                <button class="reacao" type="button">
-                    🤩 Incrível
-                </button>
-
-                <button class="reacao" type="button">
-                    🧠 Aprendi!
-                </button>
-
-                <button class="reacao" type="button">
-                    😮 Surpreendente
-                </button>
+                <button class="reacao" data-reacao="Gostei" type="button">👍 Gostei</button>
+                <button class="reacao" data-reacao="Amei" type="button">❤️ Amei</button>
+                <button class="reacao" data-reacao="Incrível" type="button">🤩 Incrível</button>
+                <button class="reacao" data-reacao="Aprendi" type="button">🧠 Aprendi!</button>
+                <button class="reacao" data-reacao="Surpreendente" type="button">😮 Surpreendente</button>
 
             </div>
 
-            <p id="mensagem" aria-live="polite"></p>
+            <p class="contador-reacao">
+                Reações: <strong class="quantidade">0</strong>
+            </p>
 
-        </section>
+            <p class="quem-reagiu">
+                Ninguém reagiu ainda.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <!-- POST 2 -->
+    <article class="conteudo-matematica">
+
+        <span class="categoria">🔢 Números</span>
+
+        <h2>O que são números primos?</h2>
+
+        <p class="autor">
+            Por
+            <a href="https://www.google.com/search?q=Maria+Matem%C3%A1tica"
+               target="_blank"
+               rel="noopener noreferrer">
+                <strong>Maria Matemática</strong>
+            </a>
+        </p>
+
+        <p>
+            Números primos são números naturais maiores que 1 que
+            possuem exatamente dois divisores positivos:
+            <strong>1 e ele mesmo</strong>.
+        </p>
+
+        <p>
+            Alguns exemplos são:
+        </p>
+
+        <div class="numeros">
+            <span>2</span>
+            <span>3</span>
+            <span>5</span>
+            <span>7</span>
+            <span>11</span>
+            <span>13</span>
+            <span>17</span>
+            <span>19</span>
+        </div>
+
+        <p>
+            O número <strong>2</strong> é especial: ele é o único
+            número primo que também é par.
+        </p>
+
+        <div class="curiosidade">
+
+            💡 <strong>Curiosidade:</strong>
+
+            <p>
+                Existem infinitos números primos. Isso significa que
+                nunca chegaremos ao "último" número primo.
+            </p>
+
+        </div>
+
+        <div class="reacoes-post" data-post="primos">
+
+            <h3>Reações desta postagem</h3>
+
+            <div class="botoes-reacao">
+
+                <button class="reacao" data-reacao="Gostei" type="button">👍 Gostei</button>
+                <button class="reacao" data-reacao="Amei" type="button">❤️ Amei</button>
+                <button class="reacao" data-reacao="Incrível" type="button">🤩 Incrível</button>
+                <button class="reacao" data-reacao="Aprendi" type="button">🧠 Aprendi!</button>
+                <button class="reacao" data-reacao="Surpreendente" type="button">😮 Surpreendente</button>
+
+            </div>
+
+            <p class="contador-reacao">
+                Reações: <strong class="quantidade">0</strong>
+            </p>
+
+            <p class="quem-reagiu">
+                Ninguém reagiu ainda.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <!-- POST 3 -->
+    <article class="conteudo-matematica">
+
+        <span class="categoria">📐 Geometria</span>
+
+        <h2>Teorema de Pitágoras</h2>
+
+        <p class="autor">
+            Por
+            <a href="https://www.google.com/search?q=Ana+Geometria"
+               target="_blank"
+               rel="noopener noreferrer">
+                <strong>Ana Geometria</strong>
+            </a>
+        </p>
+
+        <p>
+            O Teorema de Pitágoras é utilizado em triângulos retângulos.
+            Sua fórmula é:
+        </p>
+
+        <div class="formula grande">
+            <strong>a² + b² = c²</strong>
+        </div>
+
+        <p>
+            Imagine um triângulo com lados menores medindo
+            <strong>3 cm</strong> e <strong>4 cm</strong>.
+        </p>
+
+        <p>
+            Podemos descobrir a hipotenusa:
+        </p>
+
+        <div class="formula">
+
+            <strong>
+                3² + 4² = c²
+                <br>
+                9 + 16 = c²
+                <br>
+                25 = c²
+                <br>
+                c = 5
+            </strong>
+
+        </div>
+
+        <p>
+            Portanto, a hipotenusa mede <strong>5 cm</strong>.
+        </p>
+
+        <p>
+            Esse é um exemplo clássico de um triângulo
+            <strong>3-4-5</strong>.
+        </p>
+
+        <div class="reacoes-post" data-post="pitagoras">
+
+            <h3>Reações desta postagem</h3>
+
+            <div class="botoes-reacao">
+
+                <button class="reacao" data-reacao="Gostei" type="button">👍 Gostei</button>
+                <button class="reacao" data-reacao="Amei" type="button">❤️ Amei</button>
+                <button class="reacao" data-reacao="Incrível" type="button">🤩 Incrível</button>
+                <button class="reacao" data-reacao="Aprendi" type="button">🧠 Aprendi!</button>
+                <button class="reacao" data-reacao="Surpreendente" type="button">😮 Surpreendente</button>
+
+            </div>
+
+            <p class="contador-reacao">
+                Reações: <strong class="quantidade">0</strong>
+            </p>
+
+            <p class="quem-reagiu">
+                Ninguém reagiu ainda.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <!-- DESAFIO -->
+    <article class="desafio" id="desafio">
+
+        <span class="categoria">🧠 Desafio Matemático</span>
+
+        <h2>Você consegue resolver?</h2>
+
+        <p class="autor">
+            Por
+            <a href="https://www.google.com/search?q=Equipe+Matem%C3%A1tica+Sem+Mist%C3%A9rios"
+               target="_blank"
+               rel="noopener noreferrer">
+                <strong>Equipe Matemática Sem Mistérios</strong>
+            </a>
+        </p>
+
+        <p>
+            Uma loja vende uma bicicleta por <strong>R$ 800</strong>.
+            Durante uma promoção, ela recebe um desconto de
+            <strong>15%</strong>.
+        </p>
+
+        <p>
+            <strong>
+                Qual será o preço da bicicleta depois do desconto?
+            </strong>
+        </p>
+
+        <div class="dica">
+
+            💡 <strong>Dica:</strong>
+
+            <p>
+                Primeiro descubra quanto vale 15% de R$ 800.
+                Depois subtraia esse valor do preço original.
+            </p>
+
+        </div>
+
+        <details>
+
+            <summary>🔎 Ver resposta</summary>
+
+            <p>
+                15% de 800:
+            </p>
+
+            <div class="formula">
+                <strong>800 × 0,15 = 120</strong>
+            </div>
+
+            <p>
+                Agora subtraímos o desconto:
+            </p>
+
+            <div class="formula">
+                <strong>800 - 120 = R$ 680</strong>
+            </div>
+
+            <p>
+                🎯 Portanto, o preço final da bicicleta é
+                <strong>R$ 680</strong>.
+            </p>
+
+        </details>
+
+        <div class="reacoes-post" data-post="desafio">
+
+            <h3>Reações desta postagem</h3>
+
+            <div class="botoes-reacao">
+
+                <button class="reacao" data-reacao="Gostei" type="button">👍 Gostei</button>
+                <button class="reacao" data-reacao="Amei" type="button">❤️ Amei</button>
+                <button class="reacao" data-reacao="Incrível" type="button">🤩 Incrível</button>
+                <button class="reacao" data-reacao="Aprendi" type="button">🧠 Aprendi!</button>
+                <button class="reacao" data-reacao="Surpreendente" type="button">😮 Surpreendente</button>
+
+            </div>
+
+            <p class="contador-reacao">
+                Reações: <strong class="quantidade">0</strong>
+            </p>
+
+            <p class="quem-reagiu">
+                Ninguém reagiu ainda.
+            </p>
+
+        </div>
 
     </article>
 
 </main>
+
 
 <footer class="rodape">
 
@@ -407,6 +558,8 @@
 
 </footer>
 
+
 <script src="JavaScript/script.js"></script>
 
-</body> </html>
+</body>
+</html>
