@@ -1,117 +1,122 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* ==============================
-       MODO ESCURO
-    ================================= */
+/* ==============================
+   MODO ESCURO
+================================= */
 
-    const btnTema = document.querySelector("#btn-tema");
+const btnTema = document.querySelector("#btn-tema");
 
-    btnTema.addEventListener("click", function () {
+btnTema.addEventListener("click", function () {
 
-        document.body.classList.toggle("modo-escuro");
+    document.body.classList.toggle("modo-escuro");
 
-        if (document.body.classList.contains("modo-escuro")) {
-            btnTema.textContent = "☀️ Modo claro";
-        } else {
-            btnTema.textContent = "🌙 Modo escuro";
-        }
+    if (document.body.classList.contains("modo-escuro")) {
+        btnTema.textContent = "☀️ Modo claro";
+    } else {
+        btnTema.textContent = "🌙 Modo escuro";
+    }
 
-    });
-
-
-    /* ==============================
-       BOTÃO VOLTAR AO TOPO
-    ================================= */
-
-    const btnVoltarTopo = document.querySelector(".btn-voltar-topo");
-
-    btnVoltarTopo.addEventListener("click", function () {
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-
-    });
+});
 
 
-    /* ==============================
-       REAÇÕES
-    ================================= */
+/* ==============================
+   BOTÃO VOLTAR AO TOPO
+================================= */
 
-    const areasReacao = document.querySelectorAll(".reacoes-post");
+const btnVoltarTopo = document.querySelector("#btn-voltar-topo");
 
-    areasReacao.forEach(function (area) {
+btnVoltarTopo.addEventListener("click", function () {
 
-        const botoes = area.querySelectorAll(".reacao");
-        const quantidade = area.querySelector(".quantidade");
-        const quemReagiu = area.querySelector(".quem-reagiu");
+    window.scrollTo(0, 0);
 
-        let totalReacoes = 0;
-        let reacaoSelecionada = null;
-
-        botoes.forEach(function (botao) {
-
-            botao.addEventListener("click", function () {
-
-                const novaReacao = botao.dataset.reacao;
-
-                /* Se clicar na mesma reação, remove */
-                if (reacaoSelecionada === novaReacao) {
-
-                    totalReacoes--;
-
-                    botao.classList.remove("ativa");
-
-                    reacaoSelecionada = null;
-
-                    quantidade.textContent = totalReacoes;
-
-                    if (totalReacoes === 0) {
-                        quemReagiu.textContent = "Ninguém reagiu ainda.";
-                    } else {
-                        quemReagiu.textContent =
-                            "Você removeu sua reação desta postagem.";
-                    }
-
-                    return;
-                }
+});
 
 
-                /* Se já havia outra reação, troca */
-                if (reacaoSelecionada !== null) {
+/* ==============================
+   REAÇÕES INDIVIDUAIS
+================================= */
 
-                    botoes.forEach(function (outroBotao) {
-                        outroBotao.classList.remove("ativa");
-                    });
+const areasReacao = document.querySelectorAll(".reacoes-post");
 
-                    botao.classList.add("ativa");
+areasReacao.forEach(function (area) {
 
-                    reacaoSelecionada = novaReacao;
+    const botoes = area.querySelectorAll(".reacao");
+    const quantidade = area.querySelector(".quantidade");
+    const quemReagiu = area.querySelector(".quem-reagiu");
 
-                    quemReagiu.textContent =
-                        `Você reagiu com "${novaReacao}" a esta postagem.`;
+    let totalReacoes = 0;
+    let reacaoSelecionada = null;
 
-                    return;
-                }
+    botoes.forEach(function (botao) {
+
+        botao.addEventListener("click", function () {
+
+            const novaReacao = botao.dataset.reacao;
 
 
-                /* Primeira reação */
-                totalReacoes++;
+            /* ==============================
+               REMOVER REAÇÃO
+            ================================= */
+
+            if (reacaoSelecionada === novaReacao) {
+
+                totalReacoes--;
+
+                botao.classList.remove("ativa");
+
+                reacaoSelecionada = null;
+
+                quantidade.textContent = totalReacoes;
+
+                quemReagiu.textContent =
+                    totalReacoes === 0
+                        ? "Ninguém reagiu ainda."
+                        : "Você removeu sua reação desta postagem.";
+
+                return;
+            }
+
+
+            /* ==============================
+               TROCAR REAÇÃO
+            ================================= */
+
+            if (reacaoSelecionada !== null) {
+
+                botoes.forEach(function (outroBotao) {
+                    outroBotao.classList.remove("ativa");
+                });
 
                 botao.classList.add("ativa");
 
                 reacaoSelecionada = novaReacao;
 
-                quantidade.textContent = totalReacoes;
-
                 quemReagiu.textContent =
                     `Você reagiu com "${novaReacao}" a esta postagem.`;
 
-            });
+                return;
+            }
+
+
+            /* ==============================
+               PRIMEIRA REAÇÃO
+            ================================= */
+
+            totalReacoes++;
+
+            botao.classList.add("ativa");
+
+            reacaoSelecionada = novaReacao;
+
+            quantidade.textContent = totalReacoes;
+
+            quemReagiu.textContent =
+                `Você reagiu com "${novaReacao}" a esta postagem.`;
 
         });
 
     });
+
+});
 
 });
