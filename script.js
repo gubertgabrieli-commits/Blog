@@ -2,50 +2,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* ==============================
        MODO ESCURO
-    ================================= */
+    ============================== */
 
-    const btnTema = document.querySelector("#btn-tema");
+    const btnTema = document.getElementById("btn-tema");
 
-    if (btnTema) {
+    btnTema.addEventListener("click", function () {
 
-        btnTema.addEventListener("click", function () {
+        document.body.classList.toggle("modo-escuro");
 
-            document.body.classList.toggle("modo-escuro");
+        if (document.body.classList.contains("modo-escuro")) {
 
-            if (document.body.classList.contains("modo-escuro")) {
-                btnTema.textContent = "☀️ Modo claro";
-            } else {
-                btnTema.textContent = "🌙 Modo escuro";
-            }
+            btnTema.textContent = "☀️ Modo claro";
 
-        });
+        } else {
 
-    }
+            btnTema.textContent = "🌙 Modo escuro";
 
+        }
 
-    /* ==============================
-       BOTÃO VOLTAR AO TOPO
-    ================================= */
-
-    const btnVoltarTopo = document.querySelector("#btn-voltar-topo");
-
-    if (btnVoltarTopo) {
-
-        btnVoltarTopo.addEventListener("click", function () {
-
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-
-        });
-
-    }
+    });
 
 
     /* ==============================
-       REAÇÕES INDIVIDUAIS
-    ================================= */
+       VOLTAR AO TOPO
+    ============================== */
+
+    const btnVoltarTopo = document.getElementById("btn-voltar-topo");
+
+    btnVoltarTopo.addEventListener("click", function () {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+
+    /* ==============================
+       SISTEMA DE REAÇÕES
+    ============================== */
 
     const areasReacao = document.querySelectorAll(".reacoes-post");
 
@@ -65,9 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 const novaReacao = botao.dataset.reacao;
 
-                /* ==============================
-                   REMOVER REAÇÃO
-                ================================= */
+
+                /* REMOVER REAÇÃO */
 
                 if (reacaoSelecionada === novaReacao) {
 
@@ -77,24 +72,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     reacaoSelecionada = null;
 
-                    if (quantidade) {
-                        quantidade.textContent = totalReacoes;
-                    }
+                    quantidade.textContent = totalReacoes;
 
-                    if (quemReagiu) {
-                        quemReagiu.textContent =
-                            totalReacoes === 0
-                                ? "Ninguém reagiu ainda."
-                                : "Você removeu sua reação desta postagem.";
-                    }
+                    quemReagiu.textContent =
+                        "Ninguém reagiu ainda.";
 
                     return;
                 }
 
 
-                /* ==============================
-                   TROCAR REAÇÃO
-                ================================= */
+                /* TROCAR REAÇÃO */
 
                 if (reacaoSelecionada !== null) {
 
@@ -106,18 +93,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     reacaoSelecionada = novaReacao;
 
-                    if (quemReagiu) {
-                        quemReagiu.textContent =
-                            `Você reagiu com "${novaReacao}" a esta postagem.`;
-                    }
+                    quemReagiu.textContent =
+                        `Você reagiu com "${novaReacao}" a esta postagem.`;
 
                     return;
                 }
 
 
-                /* ==============================
-                   PRIMEIRA REAÇÃO
-                ================================= */
+                /* PRIMEIRA REAÇÃO */
 
                 totalReacoes++;
 
@@ -125,14 +108,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 reacaoSelecionada = novaReacao;
 
-                if (quantidade) {
-                    quantidade.textContent = totalReacoes;
-                }
+                quantidade.textContent = totalReacoes;
 
-                if (quemReagiu) {
-                    quemReagiu.textContent =
-                        `Você reagiu com "${novaReacao}" a esta postagem.`;
-                }
+                quemReagiu.textContent =
+                    `Você reagiu com "${novaReacao}" a esta postagem.`;
 
             });
 
